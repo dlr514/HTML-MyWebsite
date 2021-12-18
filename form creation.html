@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+input:required:invalid,input:focus:invalid {
+color:red;
+font-size:large;
+
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>form</h1>
+<form onsubmit="return checkForm(this);"
+<label>first name</label><br/>
+<input type="text" name="fname" required placeholder ="please enter first name"/><br/>
+<label>last name</label><br/>
+<input type="text" name="lname" required placeholder ="please enter last name"/><br/>
+<label>username</label><br/>
+<input type="text" name="username" required placeholder ="please enter username"/><br/>
+<label>email address</label><br/>
+<input type="email" name="email" required placeholder ="please enter email address"/><br/>
+<label>password</label><br/>
+<input type="password" name="password" required placeholder ="please enter password"/><br/>
+<br />
+
+<form/>
+
+<form onsubmit="return checkForm(this);"
+<p> <input type="checkbox" name = "terms"/>I accept the <u>terms and conditions</u/></p></br>
+<input type="submit" name="submit" />
+
+</body>
+
+<script>
+function checkForm(form) {
+if (!form.terms.checked) {
+alert("please indicate you accept the terms and conditions");
+form.terms.focus();
+return false;
+}
+
+if ((form.password.value.length = "6")) {
+alert("password must contain six characters");
+form.password.focus();
+return false;
+
+ } }
+
+</script>
+
+</html>

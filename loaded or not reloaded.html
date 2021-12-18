@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+if (window.performance) {
+  console.info("window.performance works fine on this browser");
+}
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+   document.write("this page is reloaded - 1");
+} else {
+  document.write("this page is not reloaded - 0");
+}
+</script>
+
+</body>
+</html>
